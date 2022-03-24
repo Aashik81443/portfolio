@@ -1,0 +1,70 @@
+.card {
+    min-height: 300px;
+    height: 100%;
+    background-color: $white;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.39);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-up(md) {
+        padding: 2rem 3rem;
+        min-height: 350px;
+    }
+
+    @include media-breakpoint-up (lg) {
+        min-height: 462px;
+        padding: 2.5rem 6rem;
+    }
+
+    &-icon {
+        i {
+            @include font-size(3.6rem);
+            color: $soft-blue;
+        }
+    }
+
+    &-content {
+        @include font-size(1rem);
+        font-weight: 300;
+
+        p {
+            opacity: 0.80;
+            line-height: 1.5;
+        }
+
+        h4 {
+            @include font-size(1.125rem);
+            font-weight: 700;
+            text-transform: capitalize;
+            margin-bottom: 0.8rem;
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 1.2rem;
+            }
+
+        }
+    }
+
+    .btn-card {
+        display: inline-block;
+        min-width: 120px;
+        background-color: $soft-blue;
+        color: $white;
+        @include font-size(0.6875rem);
+        text-transform: capitalize;
+        padding: 0.3125rem 0.3125rem;
+        transition: all 0.4s ease-in-out;
+        border: 1px solid transparent;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: $soft-blue;
+            background-color: $white;
+            border-color: $soft-blue;
+        }
+    }
+}

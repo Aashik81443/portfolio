@@ -1,0 +1,263 @@
+.site-header {
+    background-color: $soft-blue;
+
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .profile-block {
+            border-radius: 50%;
+            margin: 2rem;
+
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                content: '';
+                right: 0;
+                top: 30%;
+                width: 200px;
+                height: 200px;
+                z-index: 1;
+                -webkit-box-shadow: 0px 0px 0px 21px $soft-blue, 0px 0px 0px 52px $white, 0px 0px 0px 83px $soft-blue;
+                box-shadow: 0px 0px 0px 21px $soft-blue, 0px 0px 0px 62px $white, 0px 0px 0px 83px $soft-blue;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: 306px;
+                height: 306px;
+                z-index: 1;
+                -webkit-box-shadow: 0px 0px 0px 21px $soft-blue, 0px 0px 0px 62px $white, 0px 0px 0px 83px $soft-blue;
+                box-shadow: 0px 0px 0px 21px $soft-blue, 0px 0px 0px 62px $white, 0px 0px 0px 83px $soft-blue;
+            }
+
+            img {
+
+
+                @include media-breakpoint-down(md) {
+                    max-width: 50%;
+                    -webkit-box-shadow: 0px 0px 0px 16px $white;
+                    box-shadow: 0px 0px 0px 16px $white;
+                }
+
+                border-radius: 50%;
+            }
+        }
+
+        .portfolio-text {
+            span {
+                color: $white;
+                @include font-size(1rem);
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+    }
+
+
+    .right-content {
+        background-color: $white;
+        border-bottom: 15px solid $soft-blue;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            border-bottom: 25px solid $soft-blue;
+
+        }
+    }
+
+    .site-nav {
+        display: flex;
+        justify-content: center;
+
+        .nav {
+            @include media-breakpoint-down(md) {
+                justify-content: center;
+                padding-top: 1rem;
+                margin-bottom: 2.5rem;
+            }
+
+            &-item {
+
+                @include media-breakpoint-up(lg) {
+                    padding-left: 1.5625rem;
+                }
+            }
+
+            &-link {
+                @include font-size(1rem);
+                text-transform: uppercase;
+                color: $black;
+                font-weight: 600;
+                transition: all 0.4s ease-in-out;
+
+                &:focus,
+                &:hover {
+                    color: $soft-blue;
+                }
+            }
+        }
+
+        .btn-header {
+            background-color: $soft-blue;
+            border-radius: 35px;
+            color: $white;
+            display: inline-block;
+            min-width: auto;
+            border: 1px solid transparent;
+
+            @include media-breakpoint-down(md) {
+                padding: 0.5rem 1.5rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                min-width: 202px;
+
+            }
+
+            &:focus,
+            &:hover {
+                // color: $white;
+                background-color: $white;
+                border-color: $soft-blue;
+            }
+        }
+    }
+
+    .section-text {
+        max-width: 447px;
+        margin: 0 auto;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 570px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 783px;
+
+        }
+
+        .banner-text {
+            img {
+                max-width: 70%;
+
+                @include media-breakpoint-up(lg) {
+                    max-width: 82%;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        h5 {
+            @include font-size(1.125rem);
+            font-weight: 600;
+            text-transform: capitalize;
+            padding-top: 1rem;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 2rem;
+            }
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 3rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                @include font-size(1.5625rem);
+
+            }
+        }
+
+        .intro-block {
+            @include media-breakpoint-up(xl) {
+                margin-top: 6rem;
+                margin-left: 16rem;
+            }
+
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            i {
+                background-color: $white;
+                padding: 0.9375rem 0.9375rem 0.9375rem 1.0625rem;
+                color: $soft-blue;
+                border-radius: 50px;
+                box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.349);
+                @include font-size(1rem);
+                transition: all 0.3s ease-in-out;
+
+                @include media-breakpoint-up(lg) {
+                    padding: 1.25rem 1.25rem 20pzx 1.4375rem;
+                    @include font-size(1.2rem);
+                }
+
+                @include media-breakpoint-up(xl) {
+                    padding: 1.4375rem 1.4375rem 1.4375rem 1.5625rem;
+                    @include font-size(1.4rem);
+                }
+
+                &:hover {
+                    background-color: $soft-blue;
+                    color: $white;
+                }
+            }
+
+            small {
+                @include font-size(1rem);
+                text-transform: uppercase;
+                padding-left: 1rem;
+
+            }
+        }
+    }
+
+    .header-links {
+        padding-right: 3.125rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        h3 {
+            @include font-size(1.125rem);
+            font-weight: 600;
+            color: $soft-blue;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            padding-top: 0.875rem;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: $soft-blue;
+                    transition: transform .2s;
+                    display: inline-block;
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+    }
+}

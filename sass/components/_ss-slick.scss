@@ -1,0 +1,108 @@
+.slick {
+    &-dots {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding-left: 0;
+
+        button {
+            background-color: transparent;
+            border: 1px solid transparent;
+            outline: none;
+            box-shadow: none;
+            @include font-size(0);
+            padding: 0;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            position: relative;
+            z-index: 1;
+            transition: .3s ease-in-out;
+
+
+            &::before {
+                position: absolute;
+                z-index: -1;
+                content: '';
+                top: 50%;
+                left: 50%;
+                height: 8px;
+                width: 8px;
+                background: rgba(125, 125, 128, 0.671);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+        }
+    }
+}
+
+//gallery
+.gallery-slider {
+    @include media-breakpoint-down(lg) {
+        padding-bottom: 45px;
+    }
+
+    &__item {
+        padding: 0.75rem;
+    }
+
+    .slick {
+        &-arrow {
+            font-size: 0;
+            line-height: 1;
+            border: 0;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            z-index: 5;
+            color: $white;
+            transition: all 0.3s ease-in-out;
+
+            @include media-breakpoint-down(lg) {
+                margin-right: 0.5rem;
+            }
+
+            &:focus,
+            &:hover {
+                outline: 0;
+            }
+
+            &:before {
+                content: ' ';
+                font-family: 'icomoon';
+                @include font-size(1.4375rem);
+                color: $soft-blue;
+                // color: $soft-red-1;
+            }
+        }
+
+        &-prev {
+            left: auto;
+            right: 50.4%;
+
+            &:before {
+                content: '\e908';
+            }
+        }
+
+        &-next {
+            right: auto;
+            left: 50.4%;
+
+            &:before {
+                content: '\e909';
+            }
+        }
+
+        &-track {
+            display: flex;
+        }
+
+        &-slide {
+            // height: inherit;
+        }
+    }
+}
